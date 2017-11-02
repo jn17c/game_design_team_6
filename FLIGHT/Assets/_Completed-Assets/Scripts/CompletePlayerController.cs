@@ -13,6 +13,10 @@ public class CompletePlayerController : MonoBehaviour {
 	private Rigidbody2D rb2d;		//Store a reference to the Rigidbody2D component required to use 2D Physics.
 	private int count;				//Integer to store the number of pickups collected so far.
 
+	public float movementSpeed = 1000.0f;
+	public float clockwise = 0.5f;
+	public float counterClockwise = -5.0f;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -30,24 +34,26 @@ public class CompletePlayerController : MonoBehaviour {
 	}
 
 	//FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
-	void FixedUpdate()
+	void Update()
 	{
-		//Store the current horizontal input in the float moveHorizontal.
-		float moveHorizontal = Input.GetAxis ("Horizontal");
+		if(Input.GetKey(KeyCode.W)) {
+			rb2d.AddForce(transform.up * Time.deltaTime * 100);
+		}
+		else if(Input.GetKey(KeyCode.S)) {
+			rb2d.AddForce(transform.up * Time.deltaTime * -100);
+		}
+		else if(Input.GetKey(KeyCode.Q)) {
+			rb2d.AddForce(transform.right * Time.deltaTime * -100);
+		}
+		else if(Input.GetKey(KeyCode.E)) {
+			rb2d.AddForce(transform.right * Time.deltaTime * 100);
+		}
 
-		/*if (Input.GetAxis ("Horizontal")) {
-			transform.Rotate (new Vector3 (0, 0, 45) * Time.deltaTime);
-		}*/
-
-		//Store the current vertical input in the float moveVertical.
-		float moveVertical = Input.GetAxis ("Vertical");
-
-
-		//Use the two store floats to create a new Vector2 variable movement.
-		Vector2 movement = new Vector2 (moveHorizontal,  moveVertical);
-
-		//Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-		rb2d.AddForce (movement * speed);
+		if (Input.GetKey (KeyCode.A)) {
+			rb2d.AddTorque(1);
+		} else if (Input.GetKey (KeyCode.D)) {
+			rb2d.AddTorque(-1);
+		}
 	}
 
 	//OnTriggerEnter2D is called whenever this object overlaps with a trigger collider.
