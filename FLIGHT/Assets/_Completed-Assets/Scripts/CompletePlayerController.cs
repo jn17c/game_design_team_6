@@ -37,10 +37,10 @@ public class CompletePlayerController : MonoBehaviour {
 	void Update()
 	{
 		if(Input.GetKey(KeyCode.W)) {
-			rb2d.AddForce(transform.up * Time.deltaTime * 100);
+			rb2d.AddForce(transform.up * Time.deltaTime * 170);
 		}
 		else if(Input.GetKey(KeyCode.S)) {
-			rb2d.AddForce(transform.up * Time.deltaTime * -100);
+			rb2d.AddForce(transform.up * Time.deltaTime * -170);
 		}
 		else if(Input.GetKey(KeyCode.Q)) {
 			rb2d.AddForce(transform.right * Time.deltaTime * -100);
