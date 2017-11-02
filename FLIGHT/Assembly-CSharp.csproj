@@ -55,6 +55,7 @@
      <Compile Include="Assets\_Completed-Assets\Scripts\CompletePlayerController.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\CompleteRotator.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
+     <Compile Include="Assets\weapon.cs" />
      <None Include="Assets\TutorialInfo\Fonts\LICENSE.txt" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
