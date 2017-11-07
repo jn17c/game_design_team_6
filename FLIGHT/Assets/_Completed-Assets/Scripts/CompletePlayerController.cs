@@ -50,9 +50,9 @@ public class CompletePlayerController : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
-			rb2d.AddTorque(2);
+			rb2d.AddTorque(1);
 		} else if (Input.GetKey (KeyCode.D)) {
-			rb2d.AddTorque(-2);
+			rb2d.AddTorque(-1);
 		}
 	}
 
