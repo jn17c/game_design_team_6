@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 471}
   m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
-  controlID: 7092
+  controlID: 8710
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 218
+    x: 237
     y: 94
     width: 732
     height: 390
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 7000
+  controlID: 8711
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 7001
+  controlID: 8712
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,14 +195,14 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 19
     y: 94
     width: 214
     height: 390
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac290000
-    m_LastClickedID: 10668
+    scrollPos: {x: 0, y: 155}
+    m_SelectedIDs: c630f9ff
+    m_LastClickedID: -446266
     m_ExpandedIDs: c630f9fff8bffeff06f8ffff08f8ffffb6ffffff0000000056290000ac290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 218
+    x: 237
     y: 94
     width: 732
     height: 390
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 19
     y: 505
     width: 950
     height: 270
@@ -419,18 +419,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Completed-Assets/Scripts
+    - Assets/_Completed-Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Completed-Assets/Scripts
+  - Assets/_Completed-Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/rstamant/New Unity Project/game_design_team_6/FLIGHT
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2280000
-    m_LastClickedID: 10418
+    m_SelectedIDs: 2e280000
+    m_LastClickedID: 10286
     m_ExpandedIDs: 00000000f82700003e28000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -484,9 +484,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ac290000
-    m_LastClickedInstanceID: 10668
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: c630f9ff
+    m_LastClickedInstanceID: -446266
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000f6250000782600002c26000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -706,11 +706,11 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 954
+    x: 973
     y: 94
     width: 290
     height: 681
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 475.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
