@@ -5,8 +5,8 @@ using UnityEngine;
 public class weapon : MonoBehaviour {
 
 	public float firerate = 0;
-	public float damage = 10;
-	public LayerMask dontHit;
+	public static float damage = 10;
+	public LayerMask Hit;
 
 	public Transform BulletTrailPrefab;
 
@@ -41,12 +41,32 @@ public class weapon : MonoBehaviour {
 	void Shoot () {
 		Vector2 firedestination = new Vector2 (firindestination.position.x, firindestination.position.y);
 		Vector2 firepoint = new Vector2 (firingpoint.position.x, firingpoint.position.y);
-		RaycastHit2D hit = Physics2D.Raycast (firepoint, firedestination - firepoint, 100, dontHit);
-		Effect ();
+		RaycastHit2D hit = Physics2D.Raycast (firepoint, firedestination - firepoint, 100, Hit);
+		Vector3 hitpos;
+		if (hit.collider == null)
+			hitpos = (firedestination - firepoint) * 100;
+		else
+			hitpos = hit.point;
+
+		if (hit.collider.name == "Player2") {
+			Player2Script Player2 = hit;
+			Player2Script.DamagePlayer (damage);
+		}
+		Effect (hitpos);
 		Debug.DrawLine (firepoint, firedestination, Color.cyan);
+		if(hit.collider != null){
+			Debug.DrawLine (firepoint, hit.point, Color.red);
+			Debug.Log("We hit" + hit.collider.name + " and did " + damage + " damage ");
+		}
 	}
 
-	void Effect() {
-		Instantiate (BulletTrailPrefab, firingpoint.position, firingpoint.rotation);
+	void Effect(Vector3 hitpos) {
+		Transform trail = Instantiate (BulletTrailPrefab, firingpoint.position, firingpoint.rotation) as Transform;
+		LineRenderer lr = trail.GetComponent<LineRenderer> ();
+		if (lr != null) {
+			lr.SetPosition (0, firingpoint.position);
+			lr.SetPosition (1, hitpos);
+		}
+		Destroy (trail.gameObject, 0.04f);
 	}
 }

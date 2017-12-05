@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveTrail : MonoBehaviour {
 
-	public int speed = 230;
+	public int speed = 10;
 	
 	// Update is called once per frame
 	void Update () {

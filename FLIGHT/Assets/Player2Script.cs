@@ -16,6 +16,7 @@ public class Player2Script : MonoBehaviour {
 	public float movementSpeed = 1000.0f;
 	public float clockwise = 0.5f;
 	public float counterClockwise = -5.0f;
+	public float health = 100;
 
 	// Use this for initialization
 	void Start()
@@ -54,6 +55,8 @@ public class Player2Script : MonoBehaviour {
 		} else if (Input.GetKey (KeyCode.L)) {
 			rb2d.AddTorque(-1);
 		}
+		if (health == 0)
+			Destroy (gameObject);
 	}
 
 	//OnTriggerEnter2D is called whenever this object overlaps with a trigger collider.
@@ -73,6 +76,10 @@ public class Player2Script : MonoBehaviour {
 		}
 
 
+	}
+	public void DamagePlayer(float damage)
+	{
+		health = health - damage;
 	}
 
 	//This function updates the text displaying the number of objects we've collected and displays our victory message if we've collected all of them.
