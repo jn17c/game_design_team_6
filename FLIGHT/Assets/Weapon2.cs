@@ -47,6 +47,12 @@ public class Weapon2 : MonoBehaviour {
 			hitpos = (firedestination - firepoint) * 100;
 		else
 			hitpos = hit.point;
+
+		if (hit.collider.name == "Player") {
+			CompletePlayerController p2 = hit.collider.GetComponent<CompletePlayerController> ();
+			p2.DamagePlayer (damage);
+		}
+
 		Effect (hitpos);
 		Debug.DrawLine (firepoint, firedestination, Color.cyan);
 		if(hit.collider != null){

@@ -49,8 +49,8 @@ public class weapon : MonoBehaviour {
 			hitpos = hit.point;
 
 		if (hit.collider.name == "Player2") {
-			Player2Script Player2 = hit;
-			Player2Script.DamagePlayer (damage);
+			Player2Script p2 = hit.collider.GetComponent<Player2Script>();
+			p2.DamagePlayer (damage);
 		}
 		Effect (hitpos);
 		Debug.DrawLine (firepoint, firedestination, Color.cyan);
